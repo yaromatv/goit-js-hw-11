@@ -50,7 +50,7 @@ async function onMoreClick() {
 }
 
 function checkEndReach() {
-  if (picsApiService.total < 40 * (picsApiService.page - 1)) {
+  if (picsApiService.total <= 40 * (picsApiService.page - 1)) {
     refs.moreBtn.classList.add('is-hidden');
 
     Notify.warning(
