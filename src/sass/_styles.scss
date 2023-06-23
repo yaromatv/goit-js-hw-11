@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 24px;
+}
+
+.is-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3px;
+}
+
+.gallery img {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.photo-card {
+  height: 515px;
+  border: 3px solid black;
+  // border-right: 0px;
+  // border-bottom: 0px;
+  outline-offset: -3px;
+
+  // &:nth-child(4n) {
+  //   border-right: 3px solid black;
+  // }
+
+  // &:nth-last-child(-n + 4) {
+  //   border-bottom: 3px solid black;
+  // }
+
+  // &:last-child {
+  //   border-right: 3px solid black;
+  // }
+}
+
+.info {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.info p {
+  text-align: center;
+}
+
+.button {
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 15px;
+  outline: none;
+
+  &:active {
+    background-color: #848f91;
+  }
+
+  &:focus,
+  &:hover {
+    .search-path {
+      stroke: black;
+    }
+  }
+}
+
+.load-more {
+  display: block;
+  margin: 25px auto;
+  padding: 10px 15px 5px 15px;
+  // padding-top: 1px;
+}
