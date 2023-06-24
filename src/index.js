@@ -20,12 +20,12 @@ async function onSearchClick(event) {
   picsApiService.pageReset();
   refs.moreBtn.classList.add('is-hidden');
 
-  if (event.currentTarget.elements.searchQuery.value === '') {
+  picsApiService.query = event.currentTarget.elements.searchQuery.value.trim();
+
+  if (!picsApiService.query) {
     Notify.warning('Please type something.');
     return;
   }
-
-  picsApiService.query = event.currentTarget.elements.searchQuery.value;
 
   const data = await picsApiService.fetchQuery();
 
